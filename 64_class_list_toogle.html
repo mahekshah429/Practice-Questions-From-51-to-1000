@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggleBtn">Toggle</button>
+<div id="toggleBox" class="active"></div>
+<script>
+  let count = 0;
+  document.getElementById('toggleBtn').addEventListener('click', () => {
+    count++;
+    document.getElementById('toggleBox').classList.toggle('active', count % 2 === 0);
+  });
+</script>
+
+</body>
+</html>

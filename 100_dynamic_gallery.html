@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    #filter {
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    #gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <input id="filter" placeholder="Type category...">
+
+  <div id="gallery">
+    <img src="nature.jpg" data-category="nature" alt="Nature 1">
+    <img src="city.jpeg" data-category="city" alt="City">
+    <img src="nature2.jpg" data-category="nature" alt="Nature 2">
+  </div>
+
+  <script>
+    document.getElementById('filter').addEventListener('input', function(e) {
+      const val = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#gallery img').forEach(img => {
+        const category = img.dataset.category.toLowerCase();
+        img.style.display = category.includes(val) ? '' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

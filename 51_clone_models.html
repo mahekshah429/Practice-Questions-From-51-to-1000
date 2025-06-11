@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cloneSource"><p>Clone me</p><p>Me too</p></div>
+<script>
+  const clones = document.getElementById('cloneSource').cloneNode(true);
+  document.body.appendChild(clones);
+</script>
+
+</body>
+</html>

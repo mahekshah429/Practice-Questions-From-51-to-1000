@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="sortTable">
+  <thead><tr><th onclick="sortTable(0)">Name</th><th onclick="sortTable(1)">Age</th></tr></thead>
+  <tbody>
+    <tr><td>John</td><td>25</td></tr>
+    <tr><td>Jane</td><td>22</td></tr>
+    <tr><td>Mark</td><td>30</td></tr>
+  </tbody>
+</table>
+<script>
+  function sortTable(col) {
+    const table = document.getElementById('sortTable');
+    const rows = Array.from(table.rows).slice(1);
+    rows.sort((a, b) => a.cells[col].textContent.localeCompare(b.cells[col].textContent, undefined, { numeric: true }));
+    rows.forEach(row => table.tBodies[0].appendChild(row));
+  }
+</script>
+
+</body>
+</html>

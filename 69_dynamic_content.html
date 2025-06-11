@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="searchInput" placeholder="Search">
+<ul id="itemList">
+  <li>Apple</li><li>Banana</li><li>Orange</li>
+</ul>
+<script>
+  document.getElementById('searchInput').addEventListener('input', e => {
+    const filter = e.target.value.toLowerCase();
+    document.querySelectorAll('#itemList li').forEach(li => {
+      li.style.display = li.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

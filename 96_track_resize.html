@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resizeBox" style="width:50%;background:#ddd;">Resizing...</div>
+<script>
+  window.addEventListener('resize', () => {
+    document.getElementById('resizeBox').textContent = `Width: ${window.innerWidth}px`;
+  });
+</script>
+
+</body>
+</html>

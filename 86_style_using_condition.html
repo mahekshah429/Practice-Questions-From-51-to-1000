@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="conditionBox" data-type="warning">Check Background</div>
+<script>
+  const box = document.getElementById('conditionBox');
+  if (box.dataset.type === 'warning') {
+    box.style.backgroundColor = 'yellow';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parentBox" style="border: 2px solid black;">
+  <button onclick="changeParentStyle()">Click Child</button>
+</div>
+<script>
+  function changeParentStyle() {
+    document.getElementById('parentBox').style.border = '5px dashed green';
+  }
+</script>
+
+</body>
+</html>

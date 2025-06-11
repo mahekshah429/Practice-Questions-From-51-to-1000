@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="observeTarget"></div>
+<script>
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(m => console.log('Mutation:', m));
+  });
+  observer.observe(document.getElementById('observeTarget'), { childList: true });
+  document.getElementById('observeTarget').appendChild(document.createElement('p'));
+</script>
+
+</body>
+</html>

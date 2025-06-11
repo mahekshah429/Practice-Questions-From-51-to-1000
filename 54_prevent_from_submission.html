@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return checkForm()">
+  <input required placeholder="Name">
+  <input type="submit">
+</form>
+<script>
+  function checkForm() {
+    const fields = document.querySelectorAll('input[required]');
+    for (let f of fields) {
+      if (!f.value) {
+        alert('Please fill all required fields.');
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>

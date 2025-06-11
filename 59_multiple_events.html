@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="multiEvent">Hover and Click</div>
+<script>
+  const el = document.getElementById('multiEvent');
+  el.addEventListener('click', () => alert('Clicked'));
+  el.addEventListener('mouseover', () => el.style.color = 'red');
+  el.addEventListener('mouseout', () => el.style.color = '');
+</script>
+
+</body>
+</html>

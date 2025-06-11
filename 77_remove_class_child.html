@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+  <p class="highlight">Text 1</p>
+  <p class="highlight">Text 2</p>
+</div>
+<button onclick="removeHighlight()">Remove Class</button>
+<script>
+  function removeHighlight() {
+    document.querySelectorAll('#box .highlight').forEach(el => {
+      el.classList.remove('highlight');
+    });
+  }
+</script>
+
+</body>
+</html>

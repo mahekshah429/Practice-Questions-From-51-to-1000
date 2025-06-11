@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="todoText">
+<button onclick="addTodo()">Add</button>
+<ul id="todoList2"></ul>
+<script>
+  function addTodo() {
+    const li = document.createElement('li');
+    li.textContent = document.getElementById('todoText').value;
+    li.onclick = () => li.classList.toggle('completed');
+    li.ondblclick = () => li.remove();
+    document.getElementById('todoList2').appendChild(li);
+  }
+</script>
+<style>
+  .completed { text-decoration: line-through; }
+</style>
+
+</body>
+</html>

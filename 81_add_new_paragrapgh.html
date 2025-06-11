@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="paraInput" placeholder="Type a message">
+<button onclick="addParagraph()">Add Paragraph</button>
+<div id="paraContainer"></div>
+<script>
+  function addParagraph() {
+    const text = document.getElementById('paraInput').value;
+    const p = document.createElement('p');
+    p.textContent = text;
+    document.getElementById('paraContainer').appendChild(p);
+  }
+</script>
+
+</body>
+</html>

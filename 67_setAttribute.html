@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="status">User 1</div>
+<div class="status">User 2</div>
+<script>
+  document.querySelectorAll('.status').forEach(el => {
+    el.setAttribute('data-status', 'active');
+    console.log(el.getAttribute('data-status'));
+  });
+</script>
+
+</body>
+</html>

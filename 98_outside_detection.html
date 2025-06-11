@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="popup" style="padding:20px;background:#eee;position:absolute;">Click outside to hide</div>
+<script>
+  document.addEventListener('click', e => {
+    const popup = document.getElementById('popup');
+    if (!popup.contains(e.target)) popup.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

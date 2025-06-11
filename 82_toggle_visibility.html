@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggleDivs()">Toggle Visibility</button>
+<div class="toggle-visibility">Box 1</div>
+<div class="toggle-visibility">Box 2</div>
+<script>
+  function toggleDivs() {
+    document.querySelectorAll('.toggle-visibility').forEach(div => {
+      div.style.display = div.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

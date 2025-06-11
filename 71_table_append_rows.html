@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tableContainer"></div>
+<script>
+  const table = document.createElement('table');
+  for (let i = 0; i < 5; i++) {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>Row ${i+1} Col 1</td><td>Row ${i+1} Col 2</td>`;
+    table.appendChild(row);
+  }
+  document.getElementById('tableContainer').appendChild(table);
+</script>
+
+</body>
+</html>

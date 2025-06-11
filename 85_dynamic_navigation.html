@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  const navItems = ['Home', 'About', 'Contact'];
+  const nav = document.createElement('nav');
+  navItems.forEach(text => {
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = text;
+    link.onclick = () => {
+      document.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    };
+    nav.appendChild(link);
+  });
+  document.body.appendChild(nav);
+</script>
+<style>
+  nav a { margin: 0 10px; text-decoration: none; }
+  .active { color: red; }
+</style>
+
+</body>
+</html>

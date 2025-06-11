@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grandparent">
+  <div class="parent">
+    <div id="child">Child</div>
+  </div>
+</div>
+<script>
+  let el = document.getElementById('child');
+  while (el.parentElement) {
+    console.log(el.parentElement.className);
+    el = el.parentElement;
+  }
+</script>
+
+</body>
+</html>

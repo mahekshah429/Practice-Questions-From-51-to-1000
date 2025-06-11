@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="newText" placeholder="New text">
+<button onclick="updateParagraphs()">Update</button>
+<p>Old 1</p>
+<p>Old 2</p>
+<script>
+  function updateParagraphs() {
+    const newText = document.getElementById('newText').value;
+    document.querySelectorAll('p').forEach(p => p.textContent = newText);
+  }
+</script>
+
+</body>
+</html>
